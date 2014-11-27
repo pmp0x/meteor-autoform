@@ -1,4 +1,4 @@
-<template name="quickForm_plain">
+<template name="quickForm_ratchet">
   {{#autoForm this.qfAutoFormContext}}
     {{> afQuickFields}}
     {{#if qfShouldRenderButton}}
@@ -15,30 +15,31 @@
   {{/autoForm}}
 </template>
 
-<template name="afFormGroup_plain">
-  <div class="{{#if afFieldIsInvalid name=this.atts.name}}has-error{{/if}} input-row {{#if this.atts.name}}{{this.atts.name}}{{/if}}">
+<template name="afFormGroup_ratchet">
+  <div class="{{#if afFieldIsInvalid name=this.atts.name}}has-error{{/if}}" input-row>
     {{#unless this.skipLabel}}
-    <label {{this.afFieldLabelAtts}}>{{#if this.labelText}}{{this.labelText}}{{else}}{{afFieldLabelText name=this.atts.name}}{{/if}}</label>
+    <div class="input-row">
+    <label {{this.afFieldLabelAtts}}>{{#if this.labelText}}{{this.labelText}}{{else}}{{afFieldLabelText name=this.atts.name}}{{/if}} foo</label>
     {{/unless}}
     {{> afFieldInput this.afFieldInputAtts}}
-    <span>{{{afFieldMessage name=this.atts.name}}}</span>
+    <span>bar {{{afFieldMessage name=this.atts.name}}}</span>
+    </div>
   </div>
 </template>
 
-<template name="afObjectField_plain">
-
+<template name="afObjectField_ratchet">
   <fieldset class="input-group">
     {{#with afFieldLabelText name=this.atts.name}}
-    <legend>{{this}}</legend>
+    <legend>{{this}} foo</legend>
     {{/with}}
-    <div class="input-row">
+    foo
     {{> afQuickFields name=this.atts.name}}
-    </div>
   </fieldset>
 </template>
 
-<template name="afArrayField_plain">
-  <fieldset class="input-group">
+<template name="afArrayField_ratchet">
+<div class="insert it here"></div>
+  <fieldset>
     <legend>{{afFieldLabelText name=this.atts.name}}</legend>
     {{#if afFieldIsInvalid name=this.atts.name}}
     <div class="autoform-array-field-error">

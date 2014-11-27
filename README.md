@@ -220,7 +220,7 @@ Here's an example:
     {{> afQuickField name='summary' rows=6}}
     {{> afQuickField name='copies'}}
     {{> afQuickField name='lastCheckedOut'}}
-    <div class="form-group {{#if afFieldIsInvalid name='cost'}}has-error{{/if}}">
+    <div class="form-group2 {{#if afFieldIsInvalid name='cost'}}has-error{{/if}}">
       <div class="input-group">
         <span class="input-group-addon">$</span>
         {{> afFieldInput name='cost'}}

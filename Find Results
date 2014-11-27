@@ -1,0 +1,60 @@
+Searching 121 files for "form-group" (regex)
+
+/Users/marcus/MoveNext/AstroXpense/packages/pmp0x-autoform-ratchet/README.md:
+  221      {{> afQuickField name='copies'}}
+  222      {{> afQuickField name='lastCheckedOut'}}
+  223:     <div class="form-group {{#if afFieldIsInvalid name='cost'}}has-error{{/if}}">
+  224        <div class="input-group">
+  225          <span class="input-group-addon">$</span>
+
+/Users/marcus/MoveNext/AstroXpense/packages/pmp0x-autoform-ratchet/templates/bootstrap3-horizontal/bootstrap3-horizontal.css:
+    1: .form-horizontal .autoform-padding-fix .form-group {
+    2  	margin-right: 0;
+    3  	margin-left: 0;
+
+/Users/marcus/MoveNext/AstroXpense/packages/pmp0x-autoform-ratchet/templates/bootstrap3-horizontal/bootstrap3-horizontal.html:
+    3      {{> afQuickFields input-col-class=inputClass label-class=labelClass}}
+    4      {{#if qfShouldRenderButton}}
+    5:     <div class="form-group">
+    6        <div class="{{labelClass}}"></div>
+    7        <div class="{{inputClass}}">
+    .
+   20  
+   21  <template name="afFormGroup_bootstrap3-horizontal">
+   22:   <div class="form-group {{#if afFieldIsInvalid name=this.atts.name}}has-error{{/if}}">
+   23      {{#if skipLabel}}
+   24      {{! We include the empty label as the easiest way to keep proper field alignment}}
+   ..
+   35  
+   36  <template name="afObjectField_bootstrap3-horizontal">
+   37:   <div class="form-group {{#if afFieldIsInvalid name=this.atts.name}}has-error{{/if}}">
+   38      <label {{afFieldLabelAtts}}>{{afFieldLabelText name=this.atts.name}}</label>
+   39      <div class="{{rightColumnClass}}">
+   ..
+   49  
+   50  <template name="afArrayField_bootstrap3-horizontal">
+   51:   <div class="form-group {{#if afFieldIsInvalid name=this.atts.name}}has-error{{/if}}">
+   52      <label {{afFieldLabelAtts}}>{{afFieldLabelText name=this.atts.name}}</label>
+   53      <div class="{{rightColumnClass}}">
+
+/Users/marcus/MoveNext/AstroXpense/packages/pmp0x-autoform-ratchet/templates/bootstrap3-inline/bootstrap3-inline.html:
+   15  
+   16  <template name="afFormGroup_bootstrap3-inline">
+   17:   <div class="form-group {{#if afFieldIsInvalid name=this.atts.name}}has-error{{/if}}">
+   18      {{#unless skipLabel}}
+   19      <label {{afFieldLabelAtts}}>{{#if this.labelText}}{{this.labelText}}{{else}}{{afFieldLabelText name=this.atts.name}}{{/if}}</label>
+
+/Users/marcus/MoveNext/AstroXpense/packages/pmp0x-autoform-ratchet/templates/bootstrap3/bootstrap3.html:
+    3      {{> afQuickFields}}
+    4      {{#if qfShouldRenderButton}}
+    5:     <div class="form-group">
+    6        <button type="submit" {{submitButtonAtts}}>
+    7        {{#with ../atts.buttonContent}}
+    .
+   17  
+   18  <template name="afFormGroup_bootstrap3">
+   19:   <div class="form-group {{#if afFieldIsInvalid name=this.atts.name}}has-error{{/if}}">
+   20      {{#unless skipLabel}}
+   21      <label {{bsFieldLabelAtts}}>{{#if this.labelText}}{{this.labelText}}{{else}}{{afFieldLabelText name=this.atts.name}}{{/if}}</label>
+
+9 matches across 5 files

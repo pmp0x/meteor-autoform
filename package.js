@@ -1,7 +1,7 @@
 Package.describe({
-  name: "aldeed:autoform",
+  name: "pmp0x-autoform-ratchet",
   summary: "Easily create forms with automatic insert and update, and automatic reactive validation.",
-  git: "https://github.com/aldeed/meteor-autoform.git",
+  git: "https://github.com/pmp0x/meteor-autoform.git",
   version: "4.0.6"
 });
 
